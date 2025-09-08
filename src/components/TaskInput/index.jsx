@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './TaskInput.module.css';
 
-export default function TaskInput({ addTask }){
+export function TaskInput({ addTask }){
     const [value, setValue] = useState('');
 
     const handleSubmit = e => {

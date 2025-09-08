@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Clock from './components/Clock'
 import TaskInput from './components/TaskInput';
-import TaskList from './components/TaskList';
+import './components/TaskList';
 import styles from './App.module.css';
 
 export default function App() {
