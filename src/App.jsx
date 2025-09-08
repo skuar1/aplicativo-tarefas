@@ -5,8 +5,10 @@ import styles from './App.module.css';
 function App() {
   return (
     <>
-      <Header />
-      <Clock />
+      <div className={styles.appContainer}>
+        <Header />
+        <Clock />
+      </div>
     </>
   )
 };
