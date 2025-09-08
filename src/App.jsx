@@ -32,6 +32,8 @@ export default function App() {
       <div className={styles.appContainer}>
         <Header />
         <Clock />
+        <TaskInput addTask={addTask} />
+        
       </div>
     </>
   );
