@@ -5,7 +5,28 @@ import TaskInput from './components/TaskInput';
 import TaskList from './components/TaskList';
 import styles from './App.module.css';
 
-function App() {
+export default function App() {
+  // Retorna as tarefas salvas anteriormente ou senão um array vazio.
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem('tasks');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Faz um spread pra inserir uma nova task
+  const addTask = (task) => {
+    setTasks([...tasks, {id: Date.now(), text: task, completed: false}]);
+  };
+
+
+  const editTask = (id, newTask) => {
+
+  };
+
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
   return (
     <>
       <div className={styles.appContainer}>
@@ -13,7 +34,5 @@ function App() {
         <Clock />
       </div>
     </>
-  )
+  );
 };
-
-export default App;
