@@ -41,14 +41,14 @@ export default function TaskItem({
             <div className={styles.actions}>
                 {!isCompletedList && (
                     <button onClick={handleEdit} className={styles.edit}>
-                        {isEditing ? "s" : "e"}
+                        {isEditing ? "💾" : "✏️"}
                     </button>
                 )}
                 <button
                     onClick={() => deleteTask(task.id)}
                     className={styles.delete}
                 >
-                    {isCompletedList ? "volta" : "X"}
+                    {isCompletedList ? "↩️" : "✕"}
                 </button>
             </div>
         </li>
